@@ -1177,18 +1177,12 @@ q {
   transition: all 0.5s ease-in-out; }
   .c-header-wrap.sticky {
     background-color: rgba(0, 0, 0, 0.8);
-    background-color: #fff;
     border-bottom: 1px solid #e6e6e6;
     width: 100%;
     height: 75px;
     position: fixed;
     top: 0;
     left: 0; }
-    @media print, screen and (min-width: 64em) {
-      .c-header-wrap.sticky {
-        height: 140px; } }
-    .c-header-wrap.sticky .o-logo__brand {
-      background-image: url(../images/logo-drk.svg); }
     .c-header-wrap.sticky .c-menu__link:not(.o-cta) {
       color: #3e3e3e; }
     .c-header-wrap.sticky .o-cta--nav {
@@ -1225,13 +1219,13 @@ q {
     background-image: url("../images/logo-wht.svg");
     background-repeat: no-repeat;
     background-size: contain;
-    width: 180px;
-    height: 79px;
+    width: 80px;
+    height: 80px;
     display: block;
     overflow: hidden; }
     @media print, screen and (min-width: 64em) {
       .o-logo__brand {
-        width: 237px;
+        width: 103px;
         height: 103px; } }
 
 .c-footer-container {
@@ -2383,182 +2377,6 @@ q {
   
   Owl Carousel
 */
-/*
- *  Owl Carousel - Core
- */
-.owl-carousel {
-  display: none;
-  width: 100%;
-  -webkit-tap-highlight-color: transparent;
-  /* position relative and z-index fix webkit rendering fonts issue */
-  position: relative;
-  z-index: 1; }
-  .owl-carousel .owl-stage {
-    position: relative;
-    -ms-touch-action: pan-Y;
-    -moz-backface-visibility: hidden;
-    /* fix firefox animation glitch */ }
-  .owl-carousel .owl-stage:after {
-    content: ".";
-    display: block;
-    clear: both;
-    visibility: hidden;
-    line-height: 0;
-    height: 0; }
-  .owl-carousel .owl-stage-outer {
-    position: relative;
-    overflow: hidden;
-    /* fix for flashing background */
-    -webkit-transform: translate3d(0px, 0px, 0px); }
-  .owl-carousel .owl-wrapper,
-  .owl-carousel .owl-item {
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0); }
-  .owl-carousel .owl-item {
-    position: relative;
-    min-height: 1px;
-    float: left;
-    -webkit-backface-visibility: hidden;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none; }
-  .owl-carousel .owl-item img {
-    display: block;
-    width: 100%; }
-  .owl-carousel .owl-nav.disabled,
-  .owl-carousel .owl-dots.disabled {
-    display: none; }
-  .owl-carousel .owl-nav .owl-prev,
-  .owl-carousel .owl-nav .owl-next,
-  .owl-carousel .owl-dot {
-    cursor: pointer;
-    cursor: hand;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none; }
-  .owl-carousel.owl-loaded {
-    display: block; }
-  .owl-carousel.owl-loading {
-    opacity: 0;
-    display: block; }
-  .owl-carousel.owl-hidden {
-    opacity: 0; }
-  .owl-carousel.owl-refresh .owl-item {
-    visibility: hidden; }
-  .owl-carousel.owl-drag .owl-item {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none; }
-  .owl-carousel.owl-grab {
-    cursor: move;
-    cursor: grab; }
-  .owl-carousel.owl-rtl {
-    direction: rtl; }
-  .owl-carousel.owl-rtl .owl-item {
-    float: right; }
-
-/* No Js */
-.no-js .owl-carousel {
-  display: block; }
-
-/*
- * 	Default theme - Owl Carousel CSS File
- */
-.owl-theme .owl-nav {
-  margin-top: 10px;
-  text-align: center;
-  -webkit-tap-highlight-color: transparent; }
-  .owl-theme .owl-nav [class*='owl-'] {
-    color: #FFF;
-    font-size: 14px;
-    margin: 5px;
-    padding: 4px 7px;
-    background: #D6D6D6;
-    display: inline-block;
-    cursor: pointer;
-    border-radius: 3px; }
-    .owl-theme .owl-nav [class*='owl-']:hover {
-      background: #869791;
-      color: #FFF;
-      text-decoration: none; }
-  .owl-theme .owl-nav .disabled {
-    opacity: 0.5;
-    cursor: default; }
-
-.owl-theme .owl-nav.disabled + .owl-dots {
-  margin-top: 10px; }
-
-.owl-theme .owl-dots {
-  text-align: center;
-  -webkit-tap-highlight-color: transparent; }
-  .owl-theme .owl-dots .owl-dot {
-    display: inline-block;
-    zoom: 1; }
-    .owl-theme .owl-dots .owl-dot span {
-      width: 10px;
-      height: 10px;
-      margin: 5px 7px;
-      background: #FFF;
-      border: 1px solid #FFF;
-      display: block;
-      -webkit-backface-visibility: visible;
-      transition: opacity 200ms ease;
-      border-radius: 30px; }
-    .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
-      background: #bf0413; }
-
-/*
- * 	Default theme - Owl Carousel CSS File
- */
-.owl-theme .owl-nav {
-  margin-top: 10px;
-  text-align: center;
-  -webkit-tap-highlight-color: transparent; }
-  .owl-theme .owl-nav [class*='owl-'] {
-    color: #FFF;
-    font-size: 14px;
-    margin: 5px;
-    padding: 4px 7px;
-    background: #D6D6D6;
-    display: inline-block;
-    cursor: pointer;
-    border-radius: 3px; }
-    .owl-theme .owl-nav [class*='owl-']:hover {
-      background: #869791;
-      color: #FFF;
-      text-decoration: none; }
-  .owl-theme .owl-nav .disabled {
-    opacity: 0.5;
-    cursor: default; }
-
-.owl-theme .owl-nav.disabled + .owl-dots {
-  margin-top: 10px; }
-
-.owl-theme .owl-dots {
-  text-align: center;
-  -webkit-tap-highlight-color: transparent; }
-  .owl-theme .owl-dots .owl-dot {
-    display: inline-block;
-    zoom: 1; }
-    .owl-theme .owl-dots .owl-dot span {
-      width: 10px;
-      height: 10px;
-      margin: 5px 7px;
-      background: #FFF;
-      border: 1px solid #FFF;
-      display: block;
-      -webkit-backface-visibility: visible;
-      transition: opacity 200ms ease;
-      border-radius: 30px; }
-    .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
-      background: #bf0413; }
-
 /*--------------------------------
   
   Gravity Forms
@@ -2996,85 +2814,6 @@ input.datepicker_with_icon {
       .gform_fields:last-child:not(:first-child) {
         float: right; } }
 
-.o-sticky-bar {
-  background-color: transparent;
-  padding: 0;
-  margin: 0;
-  width: 12.5rem;
-  transform: translateY(-50%);
-  display: none;
-  position: fixed;
-  top: 50%;
-  z-index: 5;
-  right: -8.75rem; }
-  @media print, screen and (min-width: 64em) {
-    .o-sticky-bar {
-      display: block; } }
-  .o-sticky-bar .o-sticky__icon {
-    color: #fff;
-    font-size: 1.1rem;
-    cursor: pointer;
-    list-style-type: none;
-    background-color: #8a8a8a;
-    padding: 0;
-    height: 3.8rem;
-    transition: all 0.3s ease-in-out;
-    overflow: hidden;
-    position: relative; }
-    .o-sticky-bar .o-sticky__icon:hover {
-      transform: translateX(-8.75rem); }
-      .o-sticky-bar .o-sticky__icon:hover > a {
-        color: inherit;
-        background-color: inherit; }
-    .o-sticky-bar .o-sticky__icon > a {
-      color: inherit;
-      background-color: inherit;
-      display: block; }
-      .o-sticky-bar .o-sticky__icon > a > .fa {
-        color: #717171;
-        color: #fff;
-        font-size: 0.875rem;
-        font-style: normal;
-        font-weight: 600;
-        text-align: center;
-        background-color: #fafafa;
-        background-color: #b50412;
-        background-repeat: no-repeat;
-        background-position: 50% 30%;
-        background-size: 35%;
-        padding: 2rem 0.8rem 1rem;
-        width: 3.8rem;
-        height: 3.8rem;
-        display: block;
-        position: relative;
-        float: left;
-        margin-right: 0; }
-        .o-sticky-bar .o-sticky__icon > a > .fa.o-sched {
-          background-image: url("../images/icon-schedule.svg"); }
-        .o-sticky-bar .o-sticky__icon > a > .fa.o-shop {
-          background-image: url("../images/icon-shop.svg"); }
-        .o-sticky-bar .o-sticky__icon > a > .fa.o-call {
-          background-image: url("../images/icon-phone.svg");
-          background-size: 28%; }
-        .o-sticky-bar .o-sticky__icon > a > .fa.o-chat {
-          background-image: url("../images/icon-chat.svg"); }
-      .o-sticky-bar .o-sticky__icon > a > .o-sticky__text {
-        color: #fff;
-        font-size: 80%;
-        font-weight: 600;
-        text-transform: uppercase;
-        padding: 1.3rem 1rem;
-        display: inline-block; }
-
-.trg-overlay {
-  margin-right: auto;
-  margin-left: auto;
-  display: block;
-  background-color: rgba(255, 255, 255, 0) !important;
-  border: none !important;
-  left: 0;
-  right: 0; }
-
 /*--------------------------------
   
   Parts
@@ -3093,9 +2832,9 @@ input.datepicker_with_icon {
   padding-right: 0.625rem;
   padding-left: 0.625rem;
   margin-right: auto;
-  margin-left: auto;
-  text-align: center; }
+  margin-left: auto; }
   .c-lead-container {
+    text-align: center;
     padding: 3.125rem 0 1.25rem;
     border-bottom: 1px solid #cacaca; }
   @media print, screen and (min-width: 40em) {

@@ -116,7 +116,7 @@ gulp.task('browsersync', function() {
     browserSync.init(files, {
 	    // Replace with URL of your local site
       // proxy: local
-	    proxy: "http://local.novosano.dev/",
+	    proxy: "http://local.novocorp.dev/",
     });
     
     gulp.watch('./assets/scss/**/*.scss', ['styles']);

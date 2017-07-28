@@ -7,6 +7,7 @@ $lead: c-lead;
 
 .#{$lead} {
 	&-container {
+		text-align: center;
 		padding: rem-calc(50 0 20); 
 		border-bottom: 1px solid $medium-gray;  
 	}
@@ -16,7 +17,6 @@ $lead: c-lead;
 		@include grid-col(7);
 		@include grid-column-position(center);
 	}
-	text-align: center;
 	&__accent {
 		color: darken($dark-gray, 10%);
 	}
