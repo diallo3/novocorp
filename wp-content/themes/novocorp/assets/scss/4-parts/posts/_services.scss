@@ -1,0 +1,110 @@
+$con: o-content;
+$are: o-area;
+$tar: o-target;
+$ben: o-benefit;
+
+$card: c-card;
+
+
+.#{$con} {
+	@include grid-row;
+	border-bottom: 1px solid lighten($light-gray, 3%); 
+	margin-top: 2.5em;
+	padding-bottom: 2em;  
+	&:last-of-type {
+		border: none;
+	}
+	&__title {
+		@include bottom-dots;
+	}
+	blockquote {
+		@include pull-quote;
+	}
+}
+
+.#{$are} {
+	&__title {
+		margin-bottom: 0;
+	}
+	&__list {
+		@include zero-out;
+		
+	}
+	&__item {
+		margin: 0 2px rem-calc(5) 0;
+		margin-right: 0.8rem; 
+		width: auto;
+		float: left;
+		display: block;
+		&::after {
+			content: ","; 
+		}
+		&:last-of-type {
+			&::after {
+				content: ""; 	
+			}
+		}
+	}
+}
+
+.#{$tar} {
+	&__points, &__cta {
+		@include grid-col(12);
+		@include breakpoint(large) {
+			@include grid-col(6);
+		}
+	}
+	&__points {
+		.#{$tar}__list {
+			@include flat_list;
+			border-bottom: 1px solid $light-gray; 
+			margin-bottom: 0.8em; 
+			padding-bottom: 0.5em;
+			.#{$tar}__item {
+				font-style: italic; 
+				font-weight: 600; 
+				padding-left: 1em;
+				margin-bottom: rem-calc(10); 
+				&::before {
+					content: "\25CF";
+					color: $s-primary;
+					font-style: normal; 
+					padding-right: 0.5em; 
+					position: absolute;
+					left: 0; 
+				}  
+			}
+		}
+	}
+	.c-card--schedule {
+		.ov {
+			background-color: black(0.2); 
+		}
+		img {
+			@include zero-out;
+			border: 5px solid lighten($light-gray, 80%);
+		}
+	}
+}
+
+.#{$card} {
+	&--schedule {
+		position: relative;
+	}
+	.o-cta {
+		@include center-align($ver: true, $hor: true, $pos: absolute);
+	}
+}
+
+.c-gallery {
+	@include zero-out;
+	&__item {
+		@include grid-col(12);
+		list-style-type: none;
+		margin: 0 0 2rem;
+		padding: 0;
+		@include breakpoint(medium) {
+			@include grid-col(6);
+		}
+	}
+}

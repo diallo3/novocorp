@@ -1,0 +1,37 @@
+{# base.twig #}
+
+{% include 'includes/html-header.twig' %}
+
+</head>
+	
+{#-- Uncomment this line if using the Off-Canvas Menu --#}
+		
+<body class="{{ body_class }}" data-template="base.twig">
+
+	<div class="c-canvas" >
+			
+		<div class="c-canvas__inner" data-off-canvas-wrapper>
+
+				{% include 'includes/inc-off-canvas.twig' %}
+				
+				<div class="c-canvas__content" data-off-canvas-content>
+					{# header #}
+					{% include 'includes/header.twig' %}
+
+					<main id="main" class="c-main" role="main">
+					{% block content %}
+					{% endblock %}
+					</main>
+					{# footer #}
+					{% include 'includes/footer.twig' %}
+					
+				</div>  
+				{#  end .main-content #}
+		</div> 
+			{#  end .off-canvas-wrapper-inner #}
+	</div> 
+	{#  end .off-canvas-wrapper #}
+	{{ function('wp_footer') }}
+</body>
+</html> 
+{# end page #}

@@ -1,0 +1,88 @@
+/*--------------------------------
+  
+  Site header
+*/
+
+// components
+.c-header-wrap {
+	padding-bottom: 1em; 
+	width: 100%; 
+	position: absolute;
+	z-index: 1005; 
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+	&.sticky {
+		background-color: black(0.8);
+		background-color: $white; 
+		border-bottom: 1px solid $light-gray; 
+		width: 100%;
+		height: 75px;
+		@include breakpoint(large) {
+			height: 140px;
+		}
+		position: fixed;
+		top: 0;
+		left: 0; 
+		.o-logo__brand {
+			background-image: url(#{$imgPath}/logo-drk.svg); 
+		}
+		.c-menu__link:not(.o-cta) {
+			color: darken($dark-gray, 30%);
+		}
+		.o-cta--nav {
+			color: $s-primary;
+			border-color: $s-primary; 
+			&:hover {
+				color: $white;
+			} 
+		}
+
+		.c-social-header-container {
+			background-color: $black; 
+			.c-menu__link {
+				color: $white;
+			}
+		}
+	}
+}
+
+.c-social-header-container {
+	background-color: black(0.2); 
+	border-bottom: 1px solid white(0.8); 
+	display: none;
+	@include breakpoint(large) {
+		display: block;
+	}
+}
+
+.c-header-container {
+	padding: .5em 0 0; 
+	// position: absolute;
+	z-index: 1; 
+}
+
+
+// objects
+.o-logo {
+	@include zero-out;
+	&__brand {
+		@include hide-text;
+		background-image: url('../images/logo-wht.svg');
+		background-repeat: no-repeat;
+		-webkit-background-size: contain; 
+		-o-background-size: contain; 
+		background-size: contain; 
+		width: $logo-sm-width;
+		height: $logo-sm-height; 
+		display: block;
+		overflow: hidden;
+		@include breakpoint(large) {
+			width: $logo-width;
+			height: $logo-height; 
+		}
+	}
+}
+

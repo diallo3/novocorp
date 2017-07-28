@@ -1,0 +1,97 @@
+/*--------------------------------
+  
+  Pagination
+*/
+
+$pg: c-pagination;
+
+.#{$pg} {
+	background: url('#{$imgPath}/icon-dots.svg') no-repeat 50% 50%;
+	border-top: 1px solid $medium-gray; 
+	margin: 3em 0 1em;
+	&__nav {
+		@include grid-row;
+		padding: 1em 0; 
+	}
+	&__prev, &__next {
+		@include grid-col(30%);
+		vertical-align: baseline; 
+		a {
+			display: table;
+		}
+	}
+
+	&__next {
+		a {
+			float: right;
+		}
+	}
+}
+.o-pg__title, .o-pg__dir {
+	vertical-align: top;
+	img {
+		@include zero-out;
+	}
+}
+.o-pg__title {
+	color: $s-primary;
+	font-size: rem-calc(12);
+	text-transform: uppercase;
+	margin: 0 0.3rem; 
+	padding: .5em 1em; 
+	display: none;
+	@include breakpoint(medium) {
+		display: table-cell;
+	}
+}
+
+.o-pg__dir {
+	width: 30px;
+	height: 30px;
+	display: table-cell;
+	img {
+		width: 100%;
+		max-width: 100%;
+	}
+}
+
+.#{$pg}__posts {
+	@include pagination-container;
+	text-align: center;
+	background: none; 
+	border: none;
+	padding: 0;
+	.page-number {
+		@include pagination-item-current;
+		color: $dark-gray;
+		background-color: $white;
+		border: 1px solid $medium-gray;  
+		-webkit-border-radius: 50%; 
+		border-radius: 50%; 
+		display: none;
+		@include breakpoint(medium) {
+			display: block;
+		}
+		&:hover {
+			color: $white;
+			background-color: $medium-gray; 
+		}
+		&.current {
+			color: $white;
+			background-color: $s-primary; 
+			display: block;
+		}
+	}
+}
+
+.c-pag__next, .c-pag__prev {
+	width: 75px;  
+	a {
+		color: darken($dark-gray, 5%);
+		display: block;
+		&:hover {
+			color: $s-primary;
+			background-color: transparent; 
+		}	
+	}
+}

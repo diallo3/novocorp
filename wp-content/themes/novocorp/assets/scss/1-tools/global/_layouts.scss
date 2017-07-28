@@ -1,0 +1,44 @@
+// Global Layouts
+
+.l-block {
+	@include zero-out;
+	width: 100%;
+	position: relative;  
+}
+
+.l-wrap {
+	@include grid-row;
+}
+
+
+// layouts
+.l-logo {
+	&--main {
+		@include grid-col(10);
+		@include breakpoint(large) {
+			@include grid-col(4);
+		}
+	}
+	&--secondary {
+		margin-bottom: rem-calc(20); 
+	}
+}
+
+.l-menu {
+	&--main {
+		@include grid-col(2);
+		@include breakpoint(large) {
+			@include grid-col(8);
+		}
+		
+	}
+}
+
+.l-column__block {
+	@include grid-col(12, 0);
+	margin-bottom: rem-calc(5); 
+	@include breakpoint(medium) {
+		@include grid-col(6, 5);
+		@include grid-col-end;
+	}
+}

@@ -1,0 +1,86 @@
+// Footer
+$site:    c-footer;
+$credits: c-credits;
+
+.#{$site}-container {
+	background-color: $black;
+	padding: rem-calc(50 0 10);  
+	* {
+		color: $medium-gray;
+	}
+}
+
+[class^="#{$site}__"] {
+	@include grid-col(12);
+	text-align: center;
+	@include breakpoint(large) {
+		@include grid-column(1 of 4);
+		text-align: left;
+	}
+	
+}
+
+.#{$site} {
+	.o-logo {
+		margin-bottom: 2em; 
+		&__brand {
+			margin: 0 auto;
+			width: 180px;
+			height: 79px;
+			display: block;
+			@include breakpoint(large) {
+				margin: 0;
+			}
+		} 
+	}
+	&__general, &__service, &__contact {
+		display: none;
+		@include breakpoint(large) {
+			display: block;
+		}
+		.footer-nav {
+			@include flat-list;
+			margin-top: 0;
+			a {
+				@include animated-bottom($s-primary);
+				font-size: rem-calc(15); 
+				padding-bottom: 0.2em;
+				display: inline-block;
+			}
+		}
+	}
+	&__social {
+		.c-menu__item {
+			display: inline-block;
+		}
+		.c-menu__link {
+			@include circle(40px, lighten($black, 15%));
+			&:hover {
+				background-color: $s-primary; 
+			}
+			img {
+				@include abs-pos($t: 0, $r: 0, $b: 0, $l: 0);
+			}
+		}
+	}
+	.o-location__links {
+		@include flat-list;
+	}
+}
+
+.#{$credits} {
+	padding: 1em 0.5em; 
+	* {
+		color: $dark-gray;
+		font-size: rem-calc(13);
+	}
+	&-container {
+		background-color: $black; 
+	}
+	&__copy, &__usage {
+		@include grid-col(12);
+		@include breakpoint(large) {
+			@include grid-col(6);
+		}
+	}
+}

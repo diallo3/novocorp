@@ -1,0 +1,67 @@
+/*--------------------------------
+  
+  Buttons
+*/
+
+.o-cta {
+	@include button(
+		$background: transparent, 
+		$background-hover: $s-primary, 
+		$color: $s-primary, 
+		$style: solid
+	);
+	font-size: rem-calc(13);
+	font-weight: 700; 
+	text-transform: uppercase;
+	border-color: $s-primary; 
+	border-width: 1px; 
+	border-style: solid; 
+	border-radius: 50px; 
+	margin-bottom: 0; 
+	padding: 1.5em 2em;
+	width: auto; 
+	&:hover {
+		color: $white;
+	}
+	&--nav, &--hero, &--ghost {
+		color: $white;
+		border-color: $white; 
+	}
+	&--nav {
+		padding: .75em 1em;
+		&:hover {
+			color: $white;
+			background-color: $s-primary;
+		}
+	}
+	&--hero {
+		@include typi('call-to-action');
+		text-align: center;
+		background-color: $black; 
+		border-radius: 50%;
+		border-width: 2px; 
+		padding: 1.3rem 0.5rem;
+		width: 80px;
+		height: 80px; 
+		@include breakpoint(medium) {
+			margin: 0 1em; 
+			padding: 1.75rem 0.5rem;
+			width: 100px;
+			height: 100px; 
+		}
+	}
+	&--sm {
+		font-size: 0.8rem; 
+		text-align: center;
+		color: $white;
+		border-color: $white; 
+		padding: 1.75em 0.5rem !important;
+		width: 80px;
+		height: 80px; 
+		visibility: hidden;
+		@include breakpoint(medium) {
+			visibility: visible;
+		}
+	}
+}
+

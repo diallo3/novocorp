@@ -1,0 +1,93 @@
+/*--------------------------------
+  
+  Relationship Components
+*/
+
+$related: c-relationship;
+
+.#{$related} {
+	@include clearfix;
+	margin-bottom: rem-calc(50); 
+	// padding: rem-calc(50 0 20); 
+	border-bottom: 1px solid $medium-gray;
+	position: relative;
+	&:last-of-type {
+		border: none;
+	} 
+	&__item {
+		background-color: $black;
+		background-repeat: no-repeat ;
+		background-position: 50% 0;
+		-webkit-background-size: cover; 
+	 	-o-background-size: cover; 
+	 	background-size: cover; 
+		// padding: rem-calc(40 20); 
+		height: 280px; 
+		position: relative;
+		.ov {
+			background-color: black(0.3); 
+		}
+	}
+	&__entry {
+		@include grid-row;
+		@include abs-pos($b: 0);
+		width: 100%; 
+		height: 115px; 
+		.#{$related}__title {
+			letter-spacing: 0.05em; 
+			margin-bottom: 0; 
+			padding-bottom: 0 !important;
+			position: relative;
+			.#{$related}__link {
+				@include animated-bottom($s-primary);
+				color: $white; 
+				font-weight: 700; 
+				text-align: left;
+				padding: rem-calc(10 0); 
+				display: block;
+				&:hover {
+					background-color: black(0.3);
+				}
+			}
+		}
+		.o-term {
+			@include abs-pos($t:-35%);
+			font-size: rem-calc(12); 
+			text-transform: capitalize;
+			&__link {
+				color: $white;
+			}
+		}
+	}
+	
+	&__content, &__cta {
+		@include grid-col(12);
+		// @include breakpoint(medium) {
+		// 	@include grid-col(6);
+		// }
+		position: relative;
+	}
+	&__tag {
+		color: $white;
+		font-size: rem-calc(14); 
+		font-weight: 700;
+		font-style: italic; 
+	}
+
+	&__block {
+		@include clearfix;
+		border-bottom: 1px solid $light-gray; 
+		margin-bottom: rem-calc(30); 
+		padding-bottom: rem-calc(30); 
+		&:last-of-type {
+			@include zero-out;
+			border: none;
+		}
+	}
+
+	&__type {
+		text-align: center;
+		background: url('#{$imgPath}/icon-dots.svg') no-repeat 50% 100%;
+	}
+
+}

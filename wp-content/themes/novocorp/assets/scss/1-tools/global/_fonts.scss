@@ -1,0 +1,83 @@
+/*--------------------------------
+  
+  Fonts
+*/
+
+@import url('https://fonts.googleapis.com/css?family=ovo|Muli:200,300,400,600');
+
+$typi: (
+	  base: (
+  		null:   (16px, 1.4),
+  		medium: 18px,
+  		large:  20px,
+  	),
+
+  	basic: (
+  		null:   (14px, 1.4),
+  		medium: (16px, 1.6),
+  	),
+
+  	opening: (
+  		null:   (16px, 1.4),
+  		medium: (18px, 1.6),
+  		large:  18px,
+  	),
+
+  	call-to-action: (
+		  null:   14px,
+  		medium: 15px,
+  		large:  16px,
+  	),
+
+    // headings
+    accent: (
+    	null: (1.3em, 1.6),
+    ),
+
+    hero: (
+    	null:   32px,
+    	small:  40px,
+    	medium: 48px,
+    	large:  64px,
+    ),
+
+    lead: (
+      null:   20px,
+      small:  20px,
+      medium: 25px,
+      large:  30px,
+    ),
+    entry_h1: (
+      null:   20px,
+      small:  20px,
+      medium: 24px,
+      large:  28px,
+    ),
+
+    entry_h2: (
+      null:   18px,
+      small:  18px,
+      medium: 22px,
+      large:  24px,
+    ),
+
+    entry_h3: (
+      null:   17px,
+      small:  17px,
+      medium: 20px,
+      large:  22px,
+    )
+);
+
+@include headings() {
+  font-family: $muli; 
+  font-weight: 300; 
+  text-transform: uppercase ;
+  letter-spacing: letter-spacing(180);
+  margin: 0 0 $global-margin; 
+}
+
+p {
+	// @include typi(basic);
+	margin: 0 0 $global-margin; 
+}

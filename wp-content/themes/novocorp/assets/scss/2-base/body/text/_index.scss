@@ -1,0 +1,23 @@
+// Links
+
+html, body {
+	font-family: $muli; 
+	font-size: 1.05rem;
+}
+
+a {
+	&:link, &:active, &:visited {
+		text-decoration: none; 
+	}
+}
+
+q {
+	@include pull-quote;
+}
+
+[class*="__accent"] {
+	@include typi('accent');
+	@include heading-line($medium-gray);
+	font-family: $muli;
+	display: block;
+}

@@ -1,0 +1,7 @@
+{# vars #}
+{# {% set bck = TimberImage(acf.hero_background.value).src %} #}
+{# {% if bck %} style="background-image: url({{bck}}) {% endif %} #}
+<div class="c-hero {% if fn('is_front_page') %}c-hero--main{% endif %}">
+	<div class="o-ov"></div>
+	{% include "/includes/prt-hero-entry.twig" %}
+</div>

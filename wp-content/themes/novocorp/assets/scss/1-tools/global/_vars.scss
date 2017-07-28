@@ -1,0 +1,137 @@
+/*--------------------------------
+  
+  Vars
+*/
+
+
+// 1. Colors
+$s-primary:     #bf0413;
+$s-secondary:   #d90404;
+$s-tertiary:    #28394b;
+$s-accent:      #d97109;
+$s-gray:        #f2f2f2;
+
+$s-button:      $black;
+
+
+
+// 2. Fonts
+$muli:     'Muli', sans-serif;
+$haviland: 'Mr De Haviland', cursive;
+$ovo:  'Ovo', serif;
+
+// 3. Misc
+$logo-width: 237px;
+$logo-height: 103px;
+$logo-sm-width: 180px;
+$logo-sm-height: 79px;
+
+
+// 4. Site Mixins
+
+$pull-quote-maxwidth: 50%;
+$pull-quote-color: $s-primary;
+$pull-quote-offset-large: -15%;
+$pull-quote-offset-medium: -8%;
+$pull-quote-fontsize-medium-up: 1.25rem;
+$pull-quote-fontsize-small: 1.05rem;
+$pull-quote-gradient: false;
+
+@mixin pull-quote {
+	font-weight: 400;
+  	letter-spacing: 1.5px;
+  	font-style: normal;
+  	font-size: $pull-quote-fontsize-small;
+  	max-width: $pull-quote-maxwidth;
+  	line-height: 1.25em;
+  	text-transform: uppercase;
+  	color: $pull-quote-color;
+  	float: right;
+  	margin: 10px 0 0 20px;
+  	@if $pull-quote-gradient == true {
+    	background: linear-gradient($secondary-color, $pull-quote-color);
+  	} @else if $pull-quote-gradient == false {
+    	background: $pull-quote-color; // sets text color
+  	}
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+
+  	&:before {
+    	content: '';
+  	}
+
+  	&:after {
+    	content: '';
+  	}
+
+  	@include breakpoint(medium) {
+    	font-size: $pull-quote-fontsize-medium-up;
+    	max-width: calc(#{$pull-quote-maxwidth} - 5%);
+    	margin-right: $pull-quote-offset-medium;
+  	}
+
+  	@include breakpoint(large) {
+    	max-width: calc(#{$pull-quote-maxwidth} + 5%);
+    	margin-right: $pull-quote-offset-large;
+ 	}
+}
+
+
+
+//  animated border
+@mixin animated-bottom($color) {
+	position: relative;
+	&::before, &::after {
+		@include abs-pos($t:0, $r:0);
+		content: "";
+		background: $color; 
+		width: 0;
+		height: 2px;    
+		-webkit-transition: width .2s; 
+		-moz-transition: width .2s; 
+		-ms-transition: width .2s; 
+		-o-transition: width .2s; 
+		transition: width .2s; 
+	}
+	&::after {
+		position: absolute;
+		top: auto !important;
+		right: 0 !important;
+		bottom: 0 !important;
+		left: 0 !important; 
+	}
+	&:hover::before, &:hover::after {
+		width: 100%; 
+	}
+}
+
+@mixin heading-line($color) {
+	margin: 0 auto;
+	overflow: hidden;
+	&:before, &:after {
+		content: "";
+		background-color: $color;
+		width: 50%;
+		height: 1px;
+		display: inline-block;
+		position: relative;
+		vertical-align: middle;
+	}
+	&:before {
+		right: 1.5em;
+ 		margin-left: -50%;
+	}
+	&:after {
+		left: 1.5em;
+ 		margin-right: -50%;
+	}
+}
+
+@mixin bottom-dots {
+	background: url('#{$imgPath}/icon-dots.svg') no-repeat 1% 100%;
+	margin-bottom: 0.8em; 
+	padding-bottom: 0.5em;  
+}
+
+// 5. Paths
+$imgPath: "../images";
