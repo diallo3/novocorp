@@ -1230,7 +1230,7 @@ q {
 
 .c-footer-container {
   background-color: #0d0d0d;
-  padding: 3.125rem 0 0.625rem; }
+  padding: 1.25rem 0; }
   .c-footer-container * {
     color: #cacaca; }
 
@@ -1764,13 +1764,6 @@ q {
   overflow: hidden; }
   .c-hero * {
     position: relative; }
-  .c-hero--main {
-    height: auto;
-    min-height: 100vh;
-    position: relative; }
-    @media screen and (max-width: 39.9375em) {
-      .c-hero--main {
-        height: auto; } }
   .c-hero__header {
     margin-right: auto;
     margin-left: auto;
@@ -1887,17 +1880,6 @@ q {
   .o-ov--vid {
     background: rgba(0, 0, 0, 0.6); }
 
-.c-vid {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: none; }
-  @media print, screen and (min-width: 64em) {
-    .c-vid {
-      display: block; } }
-
 .post-type-archive-service .c-hero {
   background-image: url(../images/bck-hero-main.jpg) !important; }
 
@@ -1940,6 +1922,11 @@ q {
 
 .c-content--index {
   text-align: center; }
+
+.c-content__header {
+  text-align: center;
+  margin: 0;
+  padding: 2.5rem 0 0; }
 
 .c-content__entry {
   width: 83.33333%;
@@ -2827,7 +2814,7 @@ input.datepicker_with_icon {
   Common-Pages
 */
 .c-lead {
-  width: 83.33333%;
+  width: 91.66667%;
   float: left;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
@@ -2848,7 +2835,7 @@ input.datepicker_with_icon {
     clear: both; }
   @media print, screen and (min-width: 64em) {
     .c-lead {
-      width: 58.33333%;
+      width: 75%;
       float: left;
       padding-right: 0.625rem;
       padding-left: 0.625rem;
@@ -2878,188 +2865,109 @@ input.datepicker_with_icon {
       .c-lead__title {
         font-size: 1.875rem; } }
 
+.c-started {
+  max-width: 75rem;
+  margin-right: auto;
+  margin-left: auto;
+  margin: 1.5625rem 0 3.75rem; }
+  .c-started:before, .c-started:after {
+    content: "";
+    display: table; }
+  .c-started:after {
+    clear: both; }
+  .c-started__item {
+    width: 100%;
+    float: left;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+    text-align: center;
+    border: 1px solid silver;
+    border-width: 0 0 1px 0;
+    margin-bottom: 2em;
+    padding-bottom: 1em; }
+    @media print, screen and (min-width: 40em) {
+      .c-started__item {
+        padding-right: 0.9375rem;
+        padding-left: 0.9375rem; } }
+    .c-started__item:last-child:not(:first-child) {
+      float: right; }
+    @media print, screen and (min-width: 64em) {
+      .c-started__item {
+        width: 33.33333%;
+        float: left;
+        padding-right: 0.625rem;
+        padding-left: 0.625rem;
+        border-width: 0 1px 0 0; } }
+  @media print, screen and (min-width: 64em) and (min-width: 40em) {
+    .c-started__item {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem; } }
+    @media print, screen and (min-width: 64em) {
+        .c-started__item:last-child:not(:first-child) {
+          float: right; }
+        .c-started__item:last-of-type {
+          border: none; } }
+  .c-started__title {
+    height: 60px; }
+
 /*--------------------------------
   
   Home
 */
 .c-sidekick {
   background-color: #fff;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
   border-bottom: 1px solid #cacaca;
   position: relative; }
-  .c-sidekick .ov {
-    margin: auto;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #fff; }
-    @media print, screen and (min-width: 64em) {
-      .c-sidekick .ov {
-        background-color: rgba(255, 255, 255, 0.2); } }
   .c-sidekick__block {
     padding: 3.75rem 1.25rem;
     position: relative; }
-    @media screen and (max-width: 39.9375em) {
-      .c-sidekick__block {
-        background-image: none !important; } }
-    @media print, screen and (min-width: 40em) {
-      .c-sidekick__block {
-        min-height: 480px; } }
+    .c-sidekick__block:first-of-type {
+      padding-top: 1.875rem; }
     @media print, screen and (min-width: 64em) {
       .c-sidekick__block {
         background-position: 0 0; } }
-    @media print, screen and (min-width: 64em) {
-      .c-sidekick__block.odd .c-sidekick__entry {
-        margin-left: 50%; } }
-    .c-sidekick__block.even {
-      background-position: 500% 0; }
-      @media print, screen and (min-width: 64em) {
-        .c-sidekick__block.even {
-          background-position: 100% 0; } }
-  .c-sidekick__entry {
-    width: 100%;
-    float: left;
-    padding-right: 0.625rem;
-    padding-left: 0.625rem;
-    margin-right: auto;
-    margin-left: auto;
-    color: #242424;
-    position: relative; }
-    @media print, screen and (min-width: 40em) {
-      .c-sidekick__entry {
-        padding-right: 0.9375rem;
-        padding-left: 0.9375rem; } }
-    .c-sidekick__entry:last-child:not(:first-child) {
-      float: right; }
-    .c-sidekick__entry, .c-sidekick__entry:last-child:not(:first-child) {
-      float: none;
-      clear: both; }
-    @media print, screen and (min-width: 40em) {
-      .c-sidekick__entry {
-        width: 66.66667%;
-        float: left;
-        padding-right: 0.625rem;
-        padding-left: 0.625rem;
-        margin-right: auto;
-        margin-left: auto; } }
+    .c-sidekick__block .c-sidekick__brand, .c-sidekick__block .c-sidekick__content {
+      width: 100%;
+      float: left;
+      padding-right: 0.625rem;
+      padding-left: 0.625rem; }
+      @media print, screen and (min-width: 40em) {
+        .c-sidekick__block .c-sidekick__brand, .c-sidekick__block .c-sidekick__content {
+          padding-right: 0.9375rem;
+          padding-left: 0.9375rem; } }
+      .c-sidekick__block .c-sidekick__brand:last-child:not(:first-child), .c-sidekick__block .c-sidekick__content:last-child:not(:first-child) {
+        float: right; }
+      @media print, screen and (min-width: 40em) {
+        .c-sidekick__block .c-sidekick__brand, .c-sidekick__block .c-sidekick__content {
+          width: 50%;
+          float: left;
+          padding-right: 0.625rem;
+          padding-left: 0.625rem; } }
   @media print, screen and (min-width: 40em) and (min-width: 40em) {
-    .c-sidekick__entry {
+    .c-sidekick__block .c-sidekick__brand, .c-sidekick__block .c-sidekick__content {
       padding-right: 0.9375rem;
       padding-left: 0.9375rem; } }
-    @media print, screen and (min-width: 40em) {
-        .c-sidekick__entry:last-child:not(:first-child) {
-          float: right; }
-        .c-sidekick__entry, .c-sidekick__entry:last-child:not(:first-child) {
-          float: none;
-          clear: both; } }
-    @media print, screen and (min-width: 64em) {
-      .c-sidekick__entry {
-        width: 50%;
-        float: left;
-        padding-right: 0.625rem;
-        padding-left: 0.625rem;
-        position: static;
-        float: left;
-        margin-right: 0;
-        margin-left: 0; } }
-  @media print, screen and (min-width: 64em) and (min-width: 40em) {
-    .c-sidekick__entry {
-      padding-right: 0.9375rem;
-      padding-left: 0.9375rem; } }
-    @media print, screen and (min-width: 64em) {
-        .c-sidekick__entry:last-child:not(:first-child) {
-          float: right; }
-        .c-sidekick__entry:last-child:last-child {
-          float: left; } }
-  .c-sidekick__title {
-    color: #0d0d0d;
-    font-size: 1.625rem;
-    font-weight: 200;
-    text-shadow: 1px 1px 1px #fff;
-    background: url("../images/icon-dots.svg") no-repeat 1% 100%;
-    margin-bottom: 0.8em;
-    padding-bottom: 0.5em; }
-  .c-sidekick__points {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    border-top: 1px solid #cacaca;
-    padding: 1em 0 2em 1em; }
-    .c-sidekick__points li {
-      font-style: italic;
-      font-weight: 600;
-      padding-left: 1em;
-      text-indent: -0.1em;
-      position: relative; }
-      .c-sidekick__points li::before {
-        margin: auto;
-        position: absolute;
-        top: 0;
-        right: auto;
-        bottom: auto;
-        left: 0;
-        content: "\25CF";
-        color: #bf0413;
-        font-style: normal; }
-  .c-sidekick__footer {
-    text-align: center; }
-    @media print, screen and (min-width: 40em) {
-      .c-sidekick__footer {
-        text-align: left; } }
-
-.c-promo {
-  background-color: black;
-  background-image: url("../images/bck-promo-results.jpg");
-  background-position: 50% 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative; }
-  @media print, screen and (min-width: 64em) {
-    .c-promo {
-      background-size: contain; } }
-  .c-promo .ov {
-    background-color: rgba(0, 0, 0, 0.5); }
-  .c-promo * {
-    color: #fff; }
-  .c-promo__intro, .c-promo__exit {
-    width: 100%;
-    float: left;
-    padding-right: 0.625rem;
-    padding-left: 0.625rem;
-    text-align: center;
-    height: 400px;
-    position: relative; }
-    @media print, screen and (min-width: 40em) {
-      .c-promo__intro, .c-promo__exit {
-        padding-right: 0.9375rem;
-        padding-left: 0.9375rem; } }
-    .c-promo__intro:last-child:not(:first-child), .c-promo__exit:last-child:not(:first-child) {
-      float: right; }
-    @media print, screen and (min-width: 64em) {
-      .c-promo__intro, .c-promo__exit {
-        width: 50%;
-        float: left;
-        padding-right: 0.625rem;
-        padding-left: 0.625rem; } }
-  @media print, screen and (min-width: 64em) and (min-width: 40em) {
-    .c-promo__intro, .c-promo__exit {
-      padding-right: 0.9375rem;
-      padding-left: 0.9375rem; } }
-    @media print, screen and (min-width: 64em) {
-        .c-promo__intro:last-child:not(:first-child), .c-promo__exit:last-child:not(:first-child) {
-          float: right; } }
-  .c-promo__entry {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%); }
-  .c-promo__intro * {
-    text-align: left;
-    display: block; }
+      @media print, screen and (min-width: 40em) {
+          .c-sidekick__block .c-sidekick__brand:last-child:not(:first-child), .c-sidekick__block .c-sidekick__content:last-child:not(:first-child) {
+            float: right; } }
+    .c-sidekick__block.even .c-sidekick__brand {
+      position: static;
+      float: left;
+      margin-right: 0;
+      margin-left: 0; }
+      @media print, screen and (min-width: 64em) {
+        .c-sidekick__block.even .c-sidekick__brand {
+          position: relative;
+          left: 50%; } }
+    .c-sidekick__block.even .c-sidekick__content {
+      position: static;
+      float: left;
+      margin-right: 0;
+      margin-left: 0; }
+      @media print, screen and (min-width: 64em) {
+        .c-sidekick__block.even .c-sidekick__content {
+          position: relative;
+          left: -50%; } }
 
 .c-services-container {
   background-color: #eeeeee; }

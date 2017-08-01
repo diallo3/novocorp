@@ -25,14 +25,14 @@ $type: post-type-archive;
 	* {
 		position: relative;
 	}
-	&--main {
-		height: auto;
-		min-height: 100vh;
-		position: relative;
-		@include breakpoint(small only) {
-			height: auto; 
-		}
-	}
+	// &--main {
+	// 	height: auto;
+	// 	min-height: 100vh;
+	// 	position: relative;
+	// 	@include breakpoint(small only) {
+	// 		height: auto; 
+	// 	}
+	// }
 	&__header {
 		@include center-block;
 		@include clearfix;
@@ -95,18 +95,6 @@ $type: post-type-archive;
 	&--vid {
 		background: black(0.6); 
 	}
-}
-
-.c-vid {
-    @include breakpoint(large) {
-        display: block;
-    }
-    position: absolute;
-    top: 0;
-    left: 0;  
-    width: 100%;
-    height: 100%;
-    display: none;
 }
 
 .#{$type} {

@@ -5,25 +5,83 @@
 	
 	<div class="c-lead-container l-block">
 		<div class="l-wrap">
-					
-			<header class="c-lead__header">
-				<h2 class="c-lead__title">
-					{# {{l_title}} #}
-					Transformative business approach
-				</h2>
-			</header>
+			<div class="c-lead">		
+				<header class="c-lead__header">
+					<h2 class="c-lead__title">
+						{# {{l_title}} #}
+						Transformative business approach
+					</h2>
+				</header>
 		
-			{# {{l_entry}} #}
+				{# {{l_entry}} #}
 
-			<p>Novo Sano is a venture-backed management services organization that solves the business, technology, and regulatory challenges associated with investing and scaling medical aesthetics practices. Our non-franchise model integrates the delivery, supply, and education of unique medical aesthetics products and services with cloud-based compliance technology to create a turn-key, homogenized business that opens Med Spa investment to non-physicians, accelerates client acquisition, and creates economies of scale that maximize growth and profitability.</p>
-
+				<div class="c-lead__content">
+					<p>Novo Sano is a venture-backed management services organization that solves the business, technology, and regulatory challenges associated with investing and scaling medical aesthetics practices. Our non-franchise model integrates the delivery, supply, and education of unique medical aesthetics products and services with cloud-based compliance technology to create a turn-key, homogenized business that opens Med Spa investment to non-physicians, accelerates client acquisition, and creates economies of scale that maximize growth and profitability.</p>
+				</div>
+			</div>
 		</div>
 	</div>
+	<div class="c-content__entry l-block">
+		<div class="l-wrap">
+			<h2 class="c-content__header">{{post.get_field('properties_title')}}</h2>
+		</div>
+	</div>
+	{% for prop in post.get_field('properties') %}
+	
+	<div class="c-sidekick">
+		<article class="c-sidekick__block l-wrap">
+			<section class="c-sidekick__entry">
+				<div class="c-sidekick__brand">
+					<figure class="c-sidekick__logo">
+						<a href="{{prop.brand_link}}" target="_blank" title="{{prop.brand_title}}">
+							{% if prop.brand_logo %}
+								<img src="{{TimberImage(prop.brand_logo).src}}" />
+							{% else %}
+								<img src="http://placehold.it/2000x800" alt="{{prop.brand_title}}">
+							{% endif %}
+							
+						</a>
+					</figure>
+				</div>
+				<div class="c-sidekick__content">
+					<h3 class="c-sidekick__title">
+						<a href="{{prop.brand_link}}" target="_blank" title="{{prop.brand_title}}">{{prop.brand_title}}</a>
+					</h3>
+
+					{% if prop.brand_content %}
+						{{prop.brand_content}}
+					{% else %}
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique excepturi dignissimos, maiores alias pariatur odio debitis, exercitationem ad officiis quod cum adipisci repudiandae labore dolores quam expedita tempora veritatis dicta. </p>
+					{% endif %}
+					
+				</div>
+
+			</section>
+		</article>
+	</div> 
+
+	{% endfor %}
 
 	<div class="c-content__entry l-wrap">
-		<article class="c-article post-type-{{post.post_type}}" id="post-{{post.ID}}">
-			
-		content
-		</article>
+
+		<h2 class="c-content__header">Join the Movement</h2>
+
+
+		<div class="c-started">
+			<div class="c-started__item">
+				<h5 class="c-started__title">Investor interested in Novo Sano</h5>
+				<a href="" class="o-cta">Learn More</a>
+			</div>
+
+			<div class="c-started__item">
+				<h5 class="c-started__title">Medical Professional interested in Med Spas?</h5>
+				<a href="" class="o-cta">Get Started</a>
+			</div>
+
+			<div class="c-started__item">
+				<h5 class="c-started__title">Want to open your own med spa?</h5>
+				<a href="" class="o-cta">Get Started</a>
+			</div>
+		</div>
 	</div> 
 {% endblock %}

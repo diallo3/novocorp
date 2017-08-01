@@ -4,6 +4,7 @@
 */
 
 $lead: c-lead;
+$started: c-started;
 
 .#{$lead} {
 	&-container {
@@ -11,10 +12,10 @@ $lead: c-lead;
 		padding: rem-calc(50 0 20); 
 		border-bottom: 1px solid $medium-gray;  
 	}
-	@include grid-col(10);
+	@include grid-col(11);
 	@include grid-column-position(center);
 	@include breakpoint(large) {
-		@include grid-col(7);
+		@include grid-col(9);
 		@include grid-column-position(center);
 	}
 	&__accent {
@@ -22,5 +23,29 @@ $lead: c-lead;
 	}
 	&__title {
 		@include typi('lead');
+	}
+}
+
+.#{$started} {
+	@include grid-row;
+	margin: rem-calc(25 0 60); 
+	&__item {
+		@include grid-column;
+		text-align: center;
+		border: 1px solid darken($light-gray, 15%);
+		border-width: 0 0 1px 0; 
+		margin-bottom: 2em; 
+		padding-bottom: 1em; 
+		@include breakpoint(large) {
+			@include grid-col(4);
+			border-width: 0 1px 0 0; 
+			&:last-of-type {
+				border: none;
+			}
+		} 
+		
+	}
+	&__title {
+		height: 60px;  
 	}
 }

@@ -168,24 +168,6 @@ if (window.jQuery) {
         }
         stickyHeader();
 
-        $('.owl-carousel').owlCarousel({
-            autoplay: true,
-            loop: true,
-            margin: 20,
-            nav: false,
-            dots: true,
-            dotsEach: true,
-            responsiveClass: true,
-            responsive: {
-                0: {
-                    items: 1,
-                },
-                900: {
-                    items: 2,
-                }
-            }
-        });
-
         /************************************************************
 
             Navigation
@@ -207,13 +189,7 @@ if (window.jQuery) {
             Homepage
 
         ************************************************************/ 
-
-        // CoverVid
-        if($('.c-vid').length > 0) {
-            $('.c-vid__bck').coverVid(1920, 1080);
-        }
         
-
 
         // Odd Even for homepage
         function skCount() {

@@ -1,19 +1,31 @@
+{% set t_accent  = acf.accent.value %}
+{% set t_title   = acf.alternative_title.value %}
+{% set t_summary = acf.alternative_title_summary.value %}
+
 <article class="c-hero__entry">
 	<header class="c-hero__header">
-		{# <hr> #}
-		<span class="c-hero__accent">
-			{# {{h_accent}} #}
-			Unlocking the
-		</span>
+		{% if t_accent %}
+			<span class="c-hero__accent">
+				{{t_accent}}
+			</span>
+		{% else %}
+			<hr>
+		{% endif %}
 
 		<h1 class="c-hero__title">
-			{# {{post.title}} #}
-			Medical Aesthetics world
+			{% if t_title %}
+				{{t_title}}
+			{% else %}
+				{{post.title}}
+			{% endif %}
+			
+			{# Medical Aesthetics world #}
 		</h1>
 	</header>
 	
+	{% if t_summary %}
 	<div class="c-hero__summary">
-		{# {{h_summary}} #}
-		<p>360-degree approach to transforming the med spa industry through investment, management, and technology that accelerates profitable growth</p>
+		{{t_summary}}
 	</div>
+	{% endif %}
 </article>

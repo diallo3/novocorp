@@ -60,9 +60,9 @@ if( function_exists('acf_add_options_page') ) {
 }
 
 // Theme Options Timber
-// add_filter( 'timber_context', 'opus_timber_context'  );
+add_filter( 'timber_context', 'opus_timber_context'  );
 
-// // function opus_timber_context( $context ) {
-// //     $context['options'] = get_fields('option');
-// //     return $context;
-// // }
+function opus_timber_context( $context ) {
+    $context['options'] = get_fields('option');
+    return $context;
+}

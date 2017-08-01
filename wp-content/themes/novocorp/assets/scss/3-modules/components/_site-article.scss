@@ -24,6 +24,11 @@ $art: c-article;
 	&--index {
 		text-align: center;
 	}
+	&__header {
+		text-align: center;
+		margin: 0;
+		padding: rem-calc(40 0 0);
+	}
 	&__entry {
 		@include grid-col(10);
 		@include grid-column-position(center);
